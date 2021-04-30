@@ -2,6 +2,7 @@
 import 'dart:async';
 import 'package:hayvanlar/bitir.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Degerlendirme extends StatefulWidget {
   @override
@@ -168,7 +169,9 @@ class _DegerlendirmeStage extends State<Degerlendirme> {
 
         centerTitle: true,
         backgroundColor: Colors.brown,
-        title: Text('KENDİMİZİ DEĞERLENDİRELİM '),
+        title: Text('KENDİMİZİ DEĞERLENDİRELİM ',style: GoogleFonts.rancho(fontSize: 25.0, color: Colors.white),
+        ),
+
       ),
       body: Container(
         decoration: BoxDecoration(

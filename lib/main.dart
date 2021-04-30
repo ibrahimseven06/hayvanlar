@@ -1,6 +1,6 @@
 import 'package:hayvanlar/Anasayfa.dart';
 import 'package:hayvanlar/hata.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hayvanlar/kuslar.dart';
 import 'package:hayvanlar/memeliler.dart';
 import 'package:hayvanlar/degerlendirme.dart';
@@ -94,7 +94,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.amberAccent,
         title: Text(
           'HAYVANLARI TANIYALIM',
-          style: TextStyle(color: Colors.black, fontSize: 25.0),
+            style: GoogleFonts.rancho(fontSize: 25.0, color: Colors.white)
+         // style: TextStyle(color: Colors.black, fontSize: 25.0),
         ),
         //leading: new IconButton(icon:Icon(Icons.home_sharp) , iconSize: 40, tooltip: 'AnaSayfa', onPressed: (){},),
       ),
@@ -114,10 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
               /*Text(
                 "HAYVANLARI TANIYALIM",
-                style: TextStyle(
-                    color: Colors.lightGreen[900],
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold),
+                style: GoogleFonts.pacifico()
               ),*/
               Image.asset("Resimler/giris_icon.png", width: 100, height: 100),
               Text(

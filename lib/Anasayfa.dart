@@ -10,6 +10,7 @@ import 'package:hayvanlar/menu.dart';
 //import 'package:hayvanlar/hayvanlar.dart';
 import 'package:hayvanlar/surungenler.dart';
 import 'package:hayvanlar/menu.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Anasayfam extends StatefulWidget {
   @override
@@ -49,7 +50,7 @@ class _AnasayfamState extends State<Anasayfam> {
         centerTitle: true,
         backgroundColor: Colors.amberAccent,
         title:
-        Text('HOŞGELDİN   $adSoyad ', style: TextStyle(color: Colors.black, fontSize: 20.0,fontWeight: FontWeight.bold),
+        Text('HOŞGELDİN   $adSoyad ', style: GoogleFonts.rancho(fontSize: 25.0, color: Colors.white),
         ),
 
 
