@@ -9,6 +9,7 @@ import 'package:hayvanlar/bitir.dart';
 import 'package:hayvanlar/hakkinda.dart';
 import 'package:hayvanlar/surungenler.dart';
 
+import 'kullanicikayit.dart';
 
 void main() {
   runApp(MyApp());
@@ -37,7 +38,6 @@ class MyApp extends StatelessWidget {
         '/kuslar': (context) => Kuslar(),
         '/memeliler': (context) => Memeliler(),
         '/surungenler': (context) => Surungenler(),
-
       },
     );
   }
@@ -86,20 +86,18 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget build(BuildContext context) {
+    var data = [];
     return Scaffold(
       backgroundColor: Colors.blueGrey[100],
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.amberAccent,
-        title: Text(
-          'HAYVANLARI TANIYALIM',
+        title: Text('HAYVANLARI TANIYALIM',
             style: GoogleFonts.rancho(fontSize: 25.0, color: Colors.white)
-         // style: TextStyle(color: Colors.black, fontSize: 25.0),
-        ),
+            // style: TextStyle(color: Colors.black, fontSize: 25.0),
+            ),
         //leading: new IconButton(icon:Icon(Icons.home_sharp) , iconSize: 40, tooltip: 'AnaSayfa', onPressed: (){},),
       ),
-
-
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -113,24 +111,22 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-
               /*Text(
                 "HAYVANLARI TANIYALIM",
                 style: GoogleFonts.pacifico()
               ),*/
               Image.asset("Resimler/giris_icon.png", width: 100, height: 100),
               Text(
-                'Oyuncu Adınız(NickName)..',
+                'KULLANICI ADUNIZ',
                 style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   //
-                  width: 175,
+                  width: 250,
                   height: 36,
                   child: TextField(
-
                     textAlign: TextAlign.justify,
                     cursorColor: Colors.white,
                     style: TextStyle(color: Colors.white),
@@ -141,12 +137,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       contentPadding: EdgeInsets.only(),
                       filled: true,
                       fillColor: Color(0xff964b00),
-                      hintText: "  Oyuncu Adınızı Giriniz..",
+                      hintText: "  Kullanıcı Adınızı Giriniz..",
                       hintStyle: TextStyle(fontSize: 16.0, color: Colors.white),
-                      focusColor:Color(0xffffffff) ,
-
-
-
+                      focusColor: Color(0xffffffff),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8)),
                       ),
@@ -154,24 +147,47 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xff964b00), // background
+                      onPrimary: Colors.red, // foreground
+                    ),
+                    // onPressed: () { },
+                    onPressed: kontrol,
 
-
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xff964b00), // background
-                    onPrimary: Colors.red, // foreground
+                    child: Text(
+                      'Kullanıcı Giriş',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
-                  // onPressed: () { },
-                  onPressed: kontrol,
 
-                  child: Text(
-                    'GİRİŞ İÇİN TIKLAYINIZ..',
-                    style: TextStyle(color: Colors.white),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xff964b00), // background
+                      onPrimary: Colors.red, // foreground
+                    ),
+                    // onPressed: () { },
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => hayvankayit(),
+                          settings: RouteSettings(
+                            arguments: data,
+                          ),
+                        ),
+                      );
+                    },
+
+                    child: Text(
+                      'KULLANICI KAYIT',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
-                ),
-              ),
+                ],
+              )
             ],
           ),
         ),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hayvanlar/Anasayfa.dart';
-import 'package:hayvanlar/hayvankayit.dart';
+import 'package:hayvanlar/kullanicikayit.dart';
 import 'package:hayvanlar/istatistik.dart';
 import 'package:hayvanlar/degerlendirme.dart';
 import 'package:hayvanlar/hayvanDestek.dart';
 import 'package:hayvanlar/hakkinda.dart';
 import 'package:hayvanlar/iletisim.dart';
-import 'package:hayvanlar/sokakDostlari.dart';
+import 'package:hayvanlar/hayvanDostlari.dart';
 import 'package:hayvanlar/oneriler.dart';
 
 class Yanmenu extends StatefulWidget {
@@ -88,20 +88,6 @@ class _YanmenuState extends State<Yanmenu> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Istatistik(),
-                          settings: RouteSettings(
-                            arguments: data,
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.arrow_forward_sharp),
-                    title: Text('Hayvan Kayıt'),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => hayvankayit(),
                           settings: RouteSettings(
                             arguments: data,
                           ),

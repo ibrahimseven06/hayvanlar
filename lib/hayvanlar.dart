@@ -1,11 +1,11 @@
 class Hayvan {
-  String hayvan_ad;
-  String hayvan_cinsi;
-  String hayvan_tur;
+  String kullanici_ad;
+  String kullanici_cinsi;
+  String kullanici_yas;
 
-  Hayvan(this.hayvan_ad, this.hayvan_tur, this.hayvan_cinsi);
+  Hayvan(this.kullanici_ad, this.kullanici_cinsi, this.kullanici_yas);
 
   factory Hayvan.fromJson(Map<dynamic,dynamic> json){
-    return Hayvan(json["hayvan_ad"] as String, json["hayvan_tur"] as String, json["hayvan_cinsi"] as String);
+    return Hayvan(json["kullanici_ad"] as String, json["kullanici_cinsi"] as String, json["kullanici_yas"] as String);
   }
 }
