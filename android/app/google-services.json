@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "125988695115",
+    "project_id": "hayvan2-8e9ec",
+    "storage_bucket": "hayvan2-8e9ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125988695115:android:cbf8e8d40864b3cb0b31ce",
+        "android_client_info": {
+          "package_name": "com.example.hayvanlar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125988695115-bh6b0co0mj333sd6fnf57ce96d5mcpqm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ6DttJBzMmzIkBpxBp0PKePBeRTwecvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125988695115-bh6b0co0mj333sd6fnf57ce96d5mcpqm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
