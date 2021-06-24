@@ -5,12 +5,12 @@ import 'package:flutter/gestures.dart';
 import 'package:hayvanlar/Anasayfa.dart';
 
 
-class Istatistik2 extends StatefulWidget {
+class Istatistik extends StatefulWidget {
   @override
-  _Istatistik2State createState() => _Istatistik2State();
+  _IstatistikState createState() => _IstatistikState();
 }
 
-class _Istatistik2State extends State<Istatistik2> {
+class _IstatistikState extends State<Istatistik> {
   String adSoyad = '';
   int touchedIndex = -1;
 
@@ -33,11 +33,14 @@ class _Istatistik2State extends State<Istatistik2> {
         body: Center(
           child: Column(
             children: <Widget>[
-              Image.asset(
-                "Resimler/istatistik.jpg",
-                width: 350,
-                height: 150
-              ),
+
+                 Image.asset(
+                  "Resimler/istatistik.jpg",
+                  width: 350,
+                  height: 150,
+
+                ),
+
               SizedBox(
                 height: 12.0,
               ),Text(
@@ -154,7 +157,7 @@ class _Istatistik2State extends State<Istatistik2> {
             title: '13% ',
             radius: radius,
             titleStyle: TextStyle(
-                fontSize: fontSize, fontWeight: FontWeight.bold, color: const Color(0x000000)),
+                fontSize: fontSize, fontWeight: FontWeight.bold, color: const Color(0xffffffff)),
           );
         default:
           throw Error();

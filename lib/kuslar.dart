@@ -49,11 +49,7 @@ class _KuslarState extends State<Kuslar> {
         body: Center(
           child: Column(
             children: <Widget>[
-             /* Text(
-                'Hayvanları Tanıyalım,',
-                style: TextStyle(fontSize: 60.0, fontStyle: FontStyle.italic),
-                textAlign: TextAlign.center,
-              ),*/
+
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),

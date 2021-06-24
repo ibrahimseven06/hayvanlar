@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hayvanlar/Anasayfa.dart';
+import 'package:hayvanlar/istatistik.dart';
 import 'package:hayvanlar/degerlendirme.dart';
+import 'package:hayvanlar/hayvanDestek.dart';
 import 'package:hayvanlar/hakkinda.dart';
-
-import 'package:hayvanlar/kuslar.dart';
-import 'package:hayvanlar/memeliler.dart';
-import 'package:hayvanlar/surungenler.dart';
+import 'package:hayvanlar/iletisim.dart';
+import 'package:hayvanlar/sokakDostlari.dart';
+import 'package:hayvanlar/oneriler.dart';
 
 class Yanmenu extends StatefulWidget {
   @override
@@ -28,17 +29,17 @@ class _YanmenuState extends State<Yanmenu> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.all(20.0), //her taraftan 20 boşluk
+              padding: EdgeInsets.all(10.0), //her taraftan 20 boşluk
               color: Colors.blueGrey.shade50,
-              child: Image.asset('Resimler/ustlogo.png'),
+              child: Image.asset('Resimler/ustlogo.png'), height: 100,width: 300,
             ),
             Expanded(
+
               child: ListView(
                 children: <Widget>[
-
                   ListTile(
                     leading: Icon(Icons.arrow_forward_sharp),
-                    title: Text('Anasayfa'),
+                    title: Text('Anasayfa',),
                     onTap: () {
                       Navigator.push(
                         context,
@@ -48,51 +49,52 @@ class _YanmenuState extends State<Yanmenu> {
                           ),
                         ),
                       );
-                      },
+                    },
                   ),
                   ListTile(
                     leading: Icon(Icons.arrow_forward_sharp),
-                    title: Text('Kuşlar'),
+                    title: Text('Hayvan Dostlarımız'),
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Kuslar(),
+                        MaterialPageRoute(builder: (context) => Test(),
                           settings: RouteSettings(
                             arguments: data,
                           ),
                         ),
                       );
-                      },
+                    },
                   ),
                   ListTile(
                     leading: Icon(Icons.arrow_forward_sharp),
-                    title: Text('Sürüngenler'),
-                    onTap: () {Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Surungenler(),
-                        settings: RouteSettings(
-                          arguments: data,
-                        ),
-                      ),
-                    );
-                      },
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.arrow_forward_sharp),
-                    title: Text('Memeliler'),
+                    title: Text('Neler Yapabiliriz?'),
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Memeliler(),
+                        MaterialPageRoute(builder: (context) => animasyonsayfasi2(),
                           settings: RouteSettings(
                             arguments: data,
                           ),
                         ),
                       );
-
-
-                      },
+                    },
                   ),
+                  ListTile(
+                    leading: Icon(Icons.arrow_forward_sharp),
+                    title: Text('İstatistikler'),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Istatistik(),
+                          settings: RouteSettings(
+                            arguments: data,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+
+
                   ListTile(
                     leading: Icon(Icons.arrow_forward_sharp),
                     title: Text('Değerlendirme'),
@@ -108,6 +110,8 @@ class _YanmenuState extends State<Yanmenu> {
 
                       },
                   ),
+
+
                   ListTile(
                     leading: Icon(Icons.arrow_forward_sharp),
                     title: Text('Hakkında'),
@@ -122,7 +126,34 @@ class _YanmenuState extends State<Yanmenu> {
                       );
                       },
                   ),
-
+                  ListTile(
+                    leading: Icon(Icons.arrow_forward_sharp),
+                    title: Text('İletişim'),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Iletisim(),
+                          settings: RouteSettings(
+                            arguments: data,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.arrow_forward_sharp),
+                    title: Text('Görüş ve Öneriler'),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => dosyaIslemleri(),
+                          settings: RouteSettings(
+                            arguments: data,
+                          ),
+                        ),
+                      );
+                    },
+                  ),
                 ],
               ),
             ),

@@ -11,11 +11,11 @@ class _TestState extends State<Test> {
   Image img;
 // example: Image.asset('images/camera.png',)
 
-  Image imgIlk =  Image.asset('Resimler/hayvandestek1.jpg',width: 300,
+  Image imgIlk =  Image.asset('Resimler/hayvandestek3.jpg',width: 300,
       height: 300);
   Image imgTek =  Image.asset('Resimler/hayvandestek2.jpg',width: 300,
       height: 300);
-  Image imgCift =  Image.asset('Resimler/hayvandestek3.jpg',width: 300,
+  Image imgCift =  Image.asset('Resimler/hayvandestek1.jpg',width: 300,
       height: 300);
 
 
@@ -27,13 +27,14 @@ class _TestState extends State<Test> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Sokak Dostlarımız'),
+        title: Text('Hayvan Dostlarımız'),
         centerTitle: true,
       ),
       body: Center(
+
         child:Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
               child: img,
@@ -94,11 +95,11 @@ class _TestState extends State<Test> {
                   color = Colors.red;
                 });
               },
-              child:Container(color: color, height: 200, width: 300,
-
+              child:Container(color: color, height: 200, width: 400,alignment: Alignment.center,
                 child:Text(
-                  'Sokaktaki dostlarımız için bir fikrimiz var!',
-                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                  'SOKAKTAKİ DOSTLARIMIZ İÇİN BİR FİKRİMİZ VAR!\n\nSoğuk kış günlerinde köpekler 17 gün, kediler 6 saat aç kaldıklarında donarak ölürler.Sokak hayvanlarının yaşamalarına katkı sağlamak için sokağımızda uygun yerlere bir kap mama bir kap su bırakalım...',
+                  style: TextStyle( fontSize: 18.0, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center
                 ),
 
               )

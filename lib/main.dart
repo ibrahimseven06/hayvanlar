@@ -5,11 +5,10 @@ import 'package:hayvanlar/kuslar.dart';
 import 'package:hayvanlar/memeliler.dart';
 import 'package:hayvanlar/degerlendirme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:hayvanlar/bitir.dart';
 import 'package:hayvanlar/hakkinda.dart';
-
 import 'package:hayvanlar/surungenler.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -99,6 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         //leading: new IconButton(icon:Icon(Icons.home_sharp) , iconSize: 40, tooltip: 'AnaSayfa', onPressed: (){},),
       ),
+
+
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -153,6 +154,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
+
+
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: ElevatedButton(

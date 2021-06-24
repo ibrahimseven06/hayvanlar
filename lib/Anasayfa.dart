@@ -1,13 +1,9 @@
-import 'package:hayvanlar/hata.dart';
+
 import 'package:hayvanlar/kuslar.dart';
 import 'package:hayvanlar/memeliler.dart';
 import 'package:hayvanlar/degerlendirme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:hayvanlar/bitir.dart';
-import 'package:hayvanlar/hakkinda.dart';
 import 'package:hayvanlar/menu.dart';
-//import 'package:hayvanlar/hayvanlar.dart';
 import 'package:hayvanlar/surungenler.dart';
 import 'package:hayvanlar/menu.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,12 +46,11 @@ class _AnasayfamState extends State<Anasayfam> {
         centerTitle: true,
         backgroundColor: Colors.amberAccent,
         title:
-        Text('HOŞGELDİN   $adSoyad ', style: GoogleFonts.rancho(fontSize: 25.0, color: Colors.white),
+        Text('Hosgeldin:   $adSoyad ', style: GoogleFonts.rancho(fontSize: 25.0, color: Colors.white),
         ),
 
 
 
-        //leading: new IconButton(icon:Icon(Icons.home_sharp) , iconSize: 40, tooltip: 'AnaSayfa', onPressed: (){},),
 
         actions: <Widget>[
           IconButton(icon: Icon(Icons.info_outline) ,iconSize: 40,tooltip: 'Görüş ve Öneriler', onPressed: (){

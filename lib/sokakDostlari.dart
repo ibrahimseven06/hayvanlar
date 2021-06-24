@@ -96,14 +96,9 @@ class _animasyonsayfasiState2 extends State<animasyonsayfasi2> {
                 SizedBox(
                   height: 10,
                 ),
-                Container(
-                  color: Colors.black,
-                  height: 220,
-                  width: 305,
-                  alignment: Alignment.center,
-                  child: Image.asset('Resimler/hayvandestek1.jpg',
-                      width: 300, height: 300),
-                ),
+
+                  Image.asset('Resimler/hayvandestek1.jpg',height: 200,),
+
                 SizedBox(
                   height: 10,
                 ),
