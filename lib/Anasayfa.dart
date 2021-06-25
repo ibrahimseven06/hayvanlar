@@ -1,4 +1,5 @@
 
+import 'package:hayvanlar/bocekler.dart';
 import 'package:hayvanlar/kuslar.dart';
 import 'package:hayvanlar/memeliler.dart';
 import 'package:hayvanlar/degerlendirme.dart';
@@ -80,7 +81,7 @@ class _AnasayfamState extends State<Anasayfam> {
                   child: Text(""),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
+                  padding: const EdgeInsets.symmetric(vertical: 1.0),
                   child: ElevatedButton(
 
                     style: ElevatedButton.styleFrom(
@@ -104,7 +105,32 @@ class _AnasayfamState extends State<Anasayfam> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
+                  padding: const EdgeInsets.symmetric(vertical: 1.0),
+                  child: ElevatedButton(
+
+                    style: ElevatedButton.styleFrom(
+                      primary: Color(0xff964b00), // background
+                      onPrimary: Colors.white, // foreground
+                    ),
+
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Bocekler(),
+                          settings: RouteSettings(
+                            arguments: data,
+                          ),
+                        ),
+                      );
+
+                    },
+
+                    child: Text('BÖCEKLER'),
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 1.0),
                   child: ElevatedButton(
 
 
@@ -130,7 +156,7 @@ class _AnasayfamState extends State<Anasayfam> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
+                  padding: const EdgeInsets.symmetric(vertical: 1.0),
                   child: ElevatedButton(
 
                     style: ElevatedButton.styleFrom(
@@ -154,8 +180,9 @@ class _AnasayfamState extends State<Anasayfam> {
                     child: Text('MEMELİ HAYVANLAR'),
                   ),
                 ),
+
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
+                  padding: const EdgeInsets.symmetric(vertical: 1.0),
 
                   child: ElevatedButton(
 

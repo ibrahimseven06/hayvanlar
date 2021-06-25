@@ -3,29 +3,21 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:hayvanlar/Anasayfa.dart';
 
-class Kuslar extends StatefulWidget {
+class Bocekler extends StatefulWidget {
   @override
-  _KuslarState createState() => _KuslarState();
+  _BoceklerState createState() => _BoceklerState();
 }
 
-class _KuslarState extends State<Kuslar> {
+class _BoceklerState extends State<Bocekler> {
 
   String adSoyad = '';
 
   int hayvanNo = 1;
   List<String> hayvan_aciklama=[
-    'KAZ',
-    'BAYKUŞ',
-    'CİVCİV',
-    'GÜVERCİN',
-    'ARI KUŞU',
-    'HOROZ',
-    'KARGA',
-    'LEYLEK',
-    'ÖRDEK',
-    'PAPAĞAN',
-    'PENGUEN',
-    'TAVUK',
+    'ARI',
+    'HAMAM BÖCEĞİ',
+    'UĞUR BÖCEĞİ',
+
 
   ];
 
@@ -44,7 +36,7 @@ class _KuslarState extends State<Kuslar> {
           centerTitle: true,
           backgroundColor: Colors.lightBlueAccent,
 
-          title: Text('KUŞLAR'),
+          title: Text('BÖCEKLER'),
         ),
         body: Center(
           child: Column(
@@ -60,13 +52,13 @@ class _KuslarState extends State<Kuslar> {
                     splashColor: Colors.white,
                     onPressed: () {
                       setState(() {
-                        hayvanNo=Random().nextInt(12)+1;
+                        hayvanNo=Random().nextInt(3)+1;
 
                       });
 
                       // var aciklama='Arıkuşu hakkında bilgi verilecek...';
                     },
-                    child: Image.asset('Resimler/Kuslar/hayvan_$hayvanNo.jpg'),
+                    child: Image.asset('Resimler/Bocekler/hayvan_$hayvanNo.jpg'),
                   ),
                 ),
               ),
